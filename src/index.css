@@ -1,17 +1,16 @@
 @import "tailwindcss";
 
-
 :root {
   --font-display: "General Sans", sans-serif;
-  --primary-color: #3461FF;
-  --custom-light-blue: #F8F9FF;
+  --primary-color: #3461ff;
+  --custom-light-blue: #f8f9ff;
 }
 
 @font-face {
   font-family: var(--font-display);
-  src: url("../fonts/GeneralSans-Extralight.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Extralight.woff") format("woff"),
-    url("../fonts/GeneralSans-Extralight.ttf") format("truetype");
+  src: url("/fonts/GeneralSans-Extralight.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Extralight.woff") format("woff"),
+    url("/fonts/GeneralSans-Extralight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -19,9 +18,9 @@
 
 @font-face {
   font-family: var(--font-display);
-  src: url("../fonts/GeneralSans-ExtralightItalic.woff2") format("woff2"),
-    url("../fonts/GeneralSans-ExtralightItalic.woff") format("woff"),
-    url("../fonts/GeneralSans-ExtralightItalic.ttf") format("truetype");
+  src: url("/fonts/GeneralSans-ExtralightItalic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-ExtralightItalic.woff") format("woff"),
+    url("/fonts/GeneralSans-ExtralightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
   font-display: swap;
@@ -29,9 +28,9 @@
 
 @font-face {
   font-family: var(--font-display);
-  src: url("../fonts/GeneralSans-Light.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Light.woff") format("woff"),
-    url("../fonts/GeneralSans-Light.ttf") format("truetype");
+  src: url("/fonts/GeneralSans-Light.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Light.woff") format("woff"),
+    url("/fonts/GeneralSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -39,9 +38,9 @@
 
 @font-face {
   font-family: var(--font-display);
-  src: url("../fonts/GeneralSans-LightItalic.woff2") format("woff2"),
-    url("../fonts/GeneralSans-LightItalic.woff") format("woff"),
-    url("../fonts/GeneralSans-LightItalic.ttf") format("truetype");
+  src: url("/fonts/GeneralSans-LightItalic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-LightItalic.woff") format("woff"),
+    url("/fonts/GeneralSans-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -49,9 +48,9 @@
 
 @font-face {
   font-family: var(--font-display);
-  src: url("../fonts/GeneralSans-Regular.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Regular.woff") format("woff"),
-    url("../fonts/GeneralSans-Regular.ttf") format("truetype");
+  src: url("/fonts/GeneralSans-Regular.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Regular.woff") format("woff"),
+    url("/fonts/GeneralSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -59,9 +58,9 @@
 
 @font-face {
   font-family: var(--font-display);
-  src: url("../fonts/GeneralSans-Italic.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Italic.woff") format("woff"),
-    url("../fonts/GeneralSans-Italic.ttf") format("truetype");
+  src: url("/fonts/GeneralSans-Italic.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Italic.woff") format("woff"),
+    url("/fonts/GeneralSans-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -69,9 +68,9 @@
 
 @font-face {
   font-family: var(--font-display);
-  src: url("../fonts/GeneralSans-Medium.woff2") format("woff2"),
-    url("../fonts/GeneralSans-Medium.woff") format("woff"),
-    url("../fonts/GeneralSans-Medium.ttf") format("truetype");
+  src: url("/fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("/fonts/GeneralSans-Medium.woff") format("woff"),
+    url("/fonts/GeneralSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -127,110 +126,114 @@
   font-display: swap;
 }
 
-
-
 @theme {
   --font-display: var(--font-display), sans-serif;
   --color-primary: var(--primary-color);
   --color-light-blue: var(--custom-light-blue);
 }
 
-* {
-  @apply font-display;
-}
-
-.container {
-  @apply max-w-[1248px] mx-auto px-4 sm:px-6;
-}
-
-.container-lg {
-  @apply max-w-[1288px] mx-auto px-4 sm:px-6;
-}
-
-
-li a {
-  @apply font-medium text-[16px]
-}
-
-button {
-  @apply cursor-pointer
-}
-
-.btn {
-  @apply bg-primary text-[16px] text-white py-4 px-6 rounded-4xl leading-[20px] cursor-pointer text-nowrap
-}
-
-.btn-large {
-  @apply bg-primary py-3 min-h-[64px] px-8 sm:px-12 text-[18px] sm:text-[24px] tracking-[0px] leading-normal font-medium rounded-[64px] text-white flex items-center w-max;
-}
-
-.btn-large-secondary {
-  @apply bg-white py-3 min-h-[64px] px-12 text-[24px] tracking-[0px] leading-normal font-medium rounded-[64px] text-black flex items-center w-max
-}
-
-p {
-  @apply opacity-60;
-}
-
-.font-sm {
-  @apply text-[16px] leading-[32px];
-}
-
-.font-md {
-  @apply text-[18px] leading-[32px];
-}
-
-.font-lg {
-  @apply text-[20px] leading-[32px];
-}
-
-.font-lg-white {
-  @apply text-[20px] leading-[40px] tracking-normal text-white opacity-100;
-}
-
-.font-xl {
-  @apply text-[28px] font-medium opacity-100;
-}
-
-.link {
-  @apply text-primary hover:underline flex items-center gap-1 text-[18px] font-semibold;
-
-}
-
-
-
-/* Headings */
-
-h1{
+@layer components {
+  .heading-1 {
     @apply font-semibold text-[48px] sm:text-[64px] lg:text-[96px] leading-[1.1] tracking-[-2px] lg:tracking-[-4px];
+  }
+
+  .heading-2 {
+    @apply text-[36px] sm:text-[48px] lg:text-[64px] tracking-[-1px] font-medium;
+  }
+
+  .heading-2-xs {
+    @apply text-[30px] lg:text-[40px] lg:tracking-[-1px] lg:leading-[52px] font-medium;
+  }
+
+  .heading-2-sm {
+    @apply text-[40px] lg:text-[56px] tracking-normal lg:leading-[63px] font-medium;
+  }
+
+  .heading-2-white {
+    @apply text-white text-4xl leading-9 tracking-[-1px] font-medium lg:text-[64px] lg:leading-[87px];
+  }
+
+  .heading-3 {
+    @apply text-[32px] tracking-[0] font-medium;
+  }
+
+  .heading-3-sm {
+    @apply text-[20px] leading-9 tracking-normal font-medium;
+  }
+
+  .link {
+    @apply text-primary hover:underline flex items-center gap-1 text-[18px] font-semibold;
+  }
+
+  .btn {
+    @apply bg-primary text-[16px] text-white py-4 px-6 rounded-4xl leading-[20px] cursor-pointer text-nowrap;
+  }
+
+  .btn-large {
+    @apply bg-primary py-3 min-h-[64px] px-8 sm:px-12 text-[18px] sm:text-[24px] tracking-[0px] leading-normal font-medium rounded-[64px] text-white flex items-center w-max;
+  }
+
+  .btn-large-secondary {
+    @apply bg-white py-3 min-h-[64px] px-12 text-[24px] tracking-[0px] leading-normal font-medium rounded-[64px] text-black flex items-center w-max;
+  }
+
+  .swiper-pagination {
+    @apply -mb-0 !overflow-y-visible !relative mt-8;
+
+  
+  }
+
+
 }
 
-.heading-2 {
-  @apply text-[36px] sm:text-[48px] lg:text-[64px] tracking-[-1px] font-medium;
+@layer base {
+  * {
+    @apply font-display;
+  }
+  html {
+    @apply scroll-smooth
+  }
+  input {
+    @apply bg-white border border-black/20 rounded-[37px] placeholder:text-lg px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-200;
+  }
+  p {
+    @apply opacity-60;
+  }
+  li a {
+    @apply font-medium text-[16px];
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
 
-.heading-2-xs {
-  @apply text-[40px] tracking-[-1px] leading-[52px] font-medium
-}
+@layer utilities {
+  .font-sm {
+    @apply text-[16px] leading-[32px];
+  }
 
-.heading-2-sm {
-  @apply text-[56px] tracking-normal leading-[63px] font-medium
-}
+  .font-md {
+    @apply text-[18px] leading-[32px];
+  }
 
-.heading-2-white {
-  @apply text-white text-4xl leading-9 tracking-[-1px] font-medium lg:text-[64px] lg:leading-[87px];
-}
+  .font-lg {
+    @apply text-[20px] leading-[32px];
+  }
 
-h3{
-  @apply text-[32px] tracking-[0] font-medium;
-}
+  .font-lg-white {
+    @apply text-[20px] leading-[40px] tracking-normal text-white opacity-100;
+  }
 
-.heading-3{
-  @apply text-[20px] leading-9 tracking-normal font-medium;
-}
+  .font-xl {
+    @apply text-[28px] font-medium opacity-100;
+  }
 
+  .container {
+    @apply max-w-[1248px] mx-auto px-4 sm:px-6;
+  }
 
-/* Form */
-input {
-  @apply bg-white border border-black/20 rounded-[37px] placeholder:text-lg px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-200;
+  .container-lg {
+    @apply max-w-[1288px] mx-auto px-4 sm:px-6;
+  }
 }

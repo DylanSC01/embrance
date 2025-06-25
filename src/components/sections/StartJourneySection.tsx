@@ -1,15 +1,23 @@
-import { DarkCTA } from "../presentational/DarkCTA";
+import { motion } from "motion/react";
+
+import { DarkCTA } from "@/components/ui";
 
 export const StartJourneySection = () => {
   return (
-    <section className="py-32 px-4">
-      <div className="container py-[52px] min-h-[455px] bg-primary rounded-4xl flex items-center bg-[url(/src/assets/images/bg_pattern.jpg)] bg-cover bg-no-repeat">
+    <section className="py-20 lg:py-32 px-4">
+      <motion.div
+        className="container"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
         <DarkCTA
           title={"Start Your Journey With Us Now"}
           buttonText={"Start Now"}
           buttonLink={"#"}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

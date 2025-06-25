@@ -1,34 +1,31 @@
-import type { Faq } from "../components/presentational/FaqDropdown";
-import type { HeaderItem } from "../components/presentational/HeaderNavItem";
-import type { Process } from "../components/presentational/ProcesssCard";
-import type { ProductFeatured } from "../components/presentational/ProductFeaturedCard";
+import type { Faq, HeaderItem, Process, ProductFeatured } from "../types";
 
 export const headerLinks: HeaderItem[] = [
-  { name: "How It Works", href: "#" },
-  { name: "Our Work", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "About Us", href: "#" },
+  { name: "How It Works", href: "#how_it_works" },
+  { name: "Our Work", href: "#our_work" },
+  { name: "About Us", href: "#about" },
+  { name: "Testimonials", href: "#testimonials" },
 ];
 
 export const clientsTestimonals = [
   {
     name: "Amelia Joseph",
     job: "Chief Manager",
-    avatar: "amelia.png",
+    avatar: "amelia.webp",
     alt: "Amelia Joseph image",
     text: "My vision came alive effortlessly. Their blend of casual and professional approach made the process a breeze. Creativity flowed, and the results were beyond my expectations.",
   },
   {
     name: "Jacob Joshua",
     job: "Chief Manager",
-    avatar: "jacob.png",
+    avatar: "jacob.webp",
     alt: "Amelia Joseph image",
     text: "I found the digital expertise I needed. Their creative-professional balance exceeded expectations. Friendly interactions, exceptional outcomes. For digital enchantment, it's got to be Embrace!",
   },
   {
     name: "Jacob Joshua",
     job: "Chief Manager",
-    avatar: "jacob.png",
+    avatar: "jacob.webp",
     alt: "Amelia Joseph image",
     text: "Embrace really nails it! Creative brilliance, approachable style. They're the partners you want—artistry meets strategy. Thrilled with what they achieved!",
   },
@@ -37,17 +34,17 @@ export const clientsTestimonals = [
 export const productsFeatured: ProductFeatured[] = [
   {
     name: "Apple",
-    image: "apple.png",
+    image: "apple.webp",
     alt: "Apple computer image",
   },
   {
     name: "Coca-Cola",
-    image: "coca_cola.png",
+    image: "coca_cola.webp",
     alt: "Coca-Cola beverage image",
   },
   {
     name: "Nike",
-    image: "nike.png",
+    image: "nike.webp",
     alt: "Nike balck tenni image",
   },
 ];
@@ -72,16 +69,16 @@ export const values = [
 ];
 
 export const companies = [
-  { name: "Spotify logo", logo: "spotify.png" },
-  { name: "Google logo", logo: "google.png" },
-  { name: "Uber logo", logo: "uber.png" },
-  { name: "Microsoft logo", logo: "microsoft.png" },
-  { name: "Shopify logo", logo: "shopify.png" },
-  { name: "Evernote logo", logo: "evernote.png" },
-  { name: "Adobe logo", logo: "adobe.png" },
-  { name: "Paypal logo", logo: "paypal.png" },
-  { name: "Amazon logo", logo: "amazon.png" },
-  { name: "Asana logo", logo: "asana.png" },
+  { name: "Spotify logo", logo: "spotify.webp" },
+  { name: "Google logo", logo: "google.webp" },
+  { name: "Uber logo", logo: "uber.webp" },
+  { name: "Microsoft logo", logo: "microsoft.webp" },
+  { name: "Shopify logo", logo: "shopify.webp" },
+  { name: "Evernote logo", logo: "evernote.webp" },
+  { name: "Adobe logo", logo: "adobe.webp" },
+  { name: "Paypal logo", logo: "paypal.webp" },
+  { name: "Amazon logo", logo: "amazon.webp" },
+  { name: "Asana logo", logo: "asana.webp" },
 ];
 
 export const processes: Process[] = [
@@ -115,17 +112,17 @@ export const socialLinks = [
   {
     name: "Instagram",
     url: "https://instagram.com",
-    icon: "/src/assets/images/icons/instagram.svg",
+    icon: "/images/icons/instagram.svg",
   },
   {
     name: "Twitter",
     url: "https://twitter.com",
-    icon: "/src/assets/images/icons/twiter.svg",
+    icon: "/images/icons/twiter.svg",
   },
   {
     name: "Facebook",
     url: "https://facebook.com",
-    icon: "/src/assets/images/icons/facebook.svg",
+    icon: "/images/icons/facebook.svg",
   },
 ];
 
