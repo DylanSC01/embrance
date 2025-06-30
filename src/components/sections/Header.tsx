@@ -10,6 +10,8 @@ export const Header = () => {
   const isSticky = useStickyHeader();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleCloseMenu = () => setMenuOpen(false);
+
   return (
     <header
       className={clsx(
@@ -64,13 +66,13 @@ export const Header = () => {
       >
         <div className="flex justify-between items-center p-4 border-b-2 border-solid border-gray-200">
           <img src="/images/logo.png" alt="Embrance logo" className="h-8" />
-          <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
+          <button onClick={handleCloseMenu} aria-label="Close menu">
             <X className="h-7 w-7" />
           </button>
         </div>
 
         <nav className="p-6">
-          <HeaderNavList headerLinks={headerLinks} />
+          <HeaderNavList onSelect={handleCloseMenu} headerLinks={headerLinks} />
           <a href="#" className="btn mt-6 block text-center">
             Book a Call
           </a>
@@ -80,7 +82,7 @@ export const Header = () => {
       {/* Backdrop */}
       {menuOpen && (
         <div
-          onClick={() => setMenuOpen(false)}
+          onClick={handleCloseMenu}
           className="fixed inset-0 bg-primary/30 backdrop-blur-sm z-40 lg:hidden"
         />
       )}
