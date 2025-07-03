@@ -166,7 +166,7 @@
   }
 
   .btn {
-    @apply bg-primary text-[16px] text-white py-4 px-6 rounded-4xl leading-[20px] cursor-pointer text-nowrap;
+    @apply bg-primary text-[16px] text-white py-4 px-6 rounded-4xl leading-[20px] cursor-pointer text-nowrap disabled:bg-primary/50;
   }
 
   .btn-large {

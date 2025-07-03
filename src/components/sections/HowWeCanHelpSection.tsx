@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-import { FaqsList, LinkWithArrow } from "@/components/ui";
+import { EmailForm, FaqsList, LinkWithArrow } from "@/components/ui";
 import { FAQS } from "@/data/data";
 
 export const HowWeCanHelpSection = () => {
@@ -31,18 +31,11 @@ export const HowWeCanHelpSection = () => {
             </p>
 
             <div>
-              <form>
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-2">
-                  <input
-                    type="text"
-                    className="w-full !border-0 !bg-gray-50"
-                    placeholder="Enter Your Email"
-                  />
-                  <button className="btn h-16 text-nowrap !px-10">
-                    Lets Talk
-                  </button>
-                </div>
-              </form>
+              <EmailForm
+                wrapperClassName="flex flex-col sm:flex-row gap-4 sm:gap-2"
+                inputClassName="!border-0 !bg-gray-50 w-full"
+                buttonClassName="btn h-16 text-nowrap !px-10"
+              />
             </div>
 
             <LinkWithArrow href={"#"} customClass={"mt-10"}>
