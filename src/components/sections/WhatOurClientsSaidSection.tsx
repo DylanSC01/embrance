@@ -52,6 +52,7 @@ export const WhatOurClientsSaidSection = () => {
             <button
               onClick={slidePrev}
               disabled={isBeginning}
+              aria-label="Previous testimonial"
               className="group h-[85px] w-[85px] flex items-center justify-center rounded-full transition-colors duration-300 text-white bg-primary disabled:bg-light-blue"
             >
               <ArrowLeft className="w-10 h-10 group-disabled:text-gray-400" />
@@ -60,6 +61,7 @@ export const WhatOurClientsSaidSection = () => {
             <button
               onClick={slideNext}
               disabled={isEnd}
+              aria-label="Next testimonial"
               className="group h-[85px] w-[85px] flex items-center justify-center rounded-full transition-colors duration-300 text-white bg-primary disabled:bg-light-blue"
             >
               <ArrowRight className="w-10 h-10 group-disabled:text-gray-400" />
