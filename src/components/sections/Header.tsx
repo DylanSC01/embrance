@@ -3,7 +3,7 @@ import { X, Menu } from "lucide-react";
 import clsx from "clsx";
 
 import { HeaderNavList } from "@/components/ui";
-import useStickyHeader from "@/hooks/useStickyHeader";
+import { useStickyHeader } from "@/hooks";
 import { headerLinks } from "@/data/data";
 
 export const Header = () => {

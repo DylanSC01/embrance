@@ -1,17 +1,24 @@
+import React, { Suspense } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 
-import { TestimonialsSliderList } from "@/components/ui";
-import { useSwiperNavigation } from "@/hooks";
+import { useIsVisible, useSwiperNavigation } from "@/hooks";
 import { clientsTestimonals } from "@/data/data";
 
+const TestimonialsSliderList = React.lazy(() =>
+  import("@/components/ui/TestimonialsSliderList").then((m) => ({
+    default: m.TestimonialsSliderList,
+  }))
+);
+
 export const WhatOurClientsSaidSection = () => {
-  
   const { swiperRef, isBeginning, isEnd, slideNext, slidePrev } =
     useSwiperNavigation();
 
+  const { ref, isVisible } = useIsVisible({ threshold: 0.3 });
+
   return (
-    <section className="py-20 lg:py-32" id="testimonials">
+    <section className="py-20 lg:py-32" id="testimonials" ref={ref}>
       <div className="container">
         <motion.div
           className="flex justify-between"
@@ -69,12 +76,14 @@ export const WhatOurClientsSaidSection = () => {
           </motion.div>
         </motion.div>
 
-        <div>
-          <TestimonialsSliderList
-            swiperRef={swiperRef}
-            testimonials={clientsTestimonals}
-          />
-        </div>
+        {isVisible && (
+          <Suspense fallback={<div className="mt-16 h-40" />}>
+            <TestimonialsSliderList
+              swiperRef={swiperRef}
+              testimonials={clientsTestimonals}
+            />
+          </Suspense>
+        )}
       </div>
     </section>
   );
