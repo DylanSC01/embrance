@@ -1,12 +1,15 @@
 
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type RefObject } from 'react'
 
+interface UseIsVisibleReturn<T extends HTMLElement> {
+    ref: RefObject<T | null>;
+    isVisible: boolean;
+}
 
-
-export const useIsVisible = (options: IntersectionObserverInit) => {
+export const useIsVisible = <T extends HTMLElement>(options: IntersectionObserverInit): UseIsVisibleReturn<T> => {
   
-    const ref = useRef<HTMLDivElement>(null);
+    const ref = useRef<T>(null);
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {

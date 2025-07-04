@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-export const useStickyHeader = () => {
+
+export const useStickyHeader = (): boolean => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {

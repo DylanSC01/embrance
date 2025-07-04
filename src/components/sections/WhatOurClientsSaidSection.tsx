@@ -15,7 +15,7 @@ export const WhatOurClientsSaidSection = () => {
   const { swiperRef, isBeginning, isEnd, slideNext, slidePrev } =
     useSwiperNavigation();
 
-  const { ref, isVisible } = useIsVisible({ threshold: 0.3 });
+  const { ref, isVisible } = useIsVisible<HTMLDivElement>({ threshold: 0.3 });
 
   return (
     <section className="py-20 lg:py-32" id="testimonials" ref={ref}>

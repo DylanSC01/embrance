@@ -1,6 +1,12 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, type RefObject } from "react";
 
-export const useToggleHeight = (isOpen: boolean) => {
+interface UseToggleHeightReturn {
+  contentRef: RefObject<HTMLDivElement | null>;
+  height: string;
+}
+
+
+export const useToggleHeight = (isOpen: boolean): UseToggleHeightReturn => {
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState("0px");
 
